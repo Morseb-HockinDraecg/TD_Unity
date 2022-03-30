@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -16,13 +17,16 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
     public Transform[] spawnPoints;
-    private int nextWave = 0;
-    private float timeBetweenWave = 2f;
-    public float waveCountdown = 0f;
+    public Text waveCountdownText;
+    private float timeBetweenWave = 5f;
     private float searchCountdown = 1f;
+    private float waveCountdown;
+    private int nextWave;
     private SpawnState state = SpawnState.E_Counting;
 
     void Start(){
+        // GameObject[] _sp= GameObject.FindGameObjectsWithTag("SpawnPoint");
+        // spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint").transform;
         if (spawnPoints.Length == 0){
             Debug.LogError("No spawn point reference.");
         }
@@ -30,6 +34,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.LogError("No spawn point reference.");
         }
         waveCountdown = timeBetweenWave;
+        nextWave = 0;
     }
 
     void Update(){
@@ -37,7 +42,6 @@ public class WaveSpawner : MonoBehaviour
             if (!EnemyIsAlive()){
                 BeginNewWave();
             } else {
-                // waveCountdown = timeBetweenWave;
                 return;
             }
         }
@@ -48,6 +52,12 @@ public class WaveSpawner : MonoBehaviour
         }else{
                 waveCountdown -= Time.deltaTime;
         }
+
+        int timer = (int)Mathf.Round(waveCountdown);
+        if (timer == 0)
+            waveCountdownText.text = "Waiting";
+        else
+            waveCountdownText.text = timer.ToString();
     }
 
     void BeginNewWave(){
