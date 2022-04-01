@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2735641169935578214}
   - component: {fileID: 4231294205106233918}
   m_Layer: 6
-  m_Name: CrossowTower
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 8736855457704091061}
   - component: {fileID: 5437324372875176345}
   m_Layer: 6
-  m_Name: CrossbowTower
+  m_Name: DartsTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
