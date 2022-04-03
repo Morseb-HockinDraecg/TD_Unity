@@ -24,8 +24,7 @@ public class DirtNode : MonoBehaviour
     }
 
     void OnMouseEnter(){
-        // rend.material.color = hoverColor;
-        rend.material.color = Color.white;
+        rend.material.color = hoverColor;
     }
 
     void OnMouseExit(){
