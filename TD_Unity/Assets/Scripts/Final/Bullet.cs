@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
-{
+public class Bullet : MonoBehaviour{
     private Transform target;
-    public float speed = 20f;
+    public float radius;
+    public float speed;
     public GameObject impactEffect;
 
     public void Seek(Transform _target){

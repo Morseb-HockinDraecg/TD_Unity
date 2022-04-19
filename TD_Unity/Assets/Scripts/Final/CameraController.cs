@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
     public float mapWidth = 20;
 
 
-    private bool toggleMovement = true;
+    private bool toggleMovement = false;
     private float targetZoom;
     private float initCamSize;
     private Vector3 initCamPos;

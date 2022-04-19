@@ -4076,7 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448ca1ff7fc24864f939c4d2d67fa087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTowerPrefab: {fileID: 8855319933818204404, guid: 8b4ff73910ef4a84497f9e2422809aff, type: 3}
+  standardTowerPrefab: {fileID: 2646852403789464512, guid: 8b4ff73910ef4a84497f9e2422809aff, type: 3}
 --- !u!114 &512013443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4098,8 +4098,8 @@ MonoBehaviour:
   scrollSpeed: 5
   maxZoom: 1.35
   minZoom: 10.35
-  mapHeight: 30
-  mapWidth: 40
+  mapHeight: 10
+  mapWidth: 20
 --- !u!1001 &516175410
 PrefabInstance:
   m_ObjectHideFlags: 0
